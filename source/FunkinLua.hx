@@ -2750,8 +2750,9 @@ class FunkinLua {
 		});
 		Lua_helper.add_callback(lua, "stringSplit", function(str:String, split:String, trimContents:Bool = false) {
 			if(trimContents) {
-				str.split(split);
-				return str.trim(split);
+				var a = str.trim();
+				a.split(split);
+				return a;
 			} else {
 				return str.split(split);
 			}
